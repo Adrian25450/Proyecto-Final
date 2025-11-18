@@ -36,8 +36,8 @@ CREATE TABLE IF NOT EXISTS documentos (
 -- Insertar usuarios de prueba
 -- Contraseña para ambos: 123456 (se debe hashear en PHP con password_hash)
 INSERT INTO usuarios (username, password, nombre, email, rol) VALUES
-('estudiante1', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'Juan Pérez', 'estudiante1@example.com', 'estudiante'),
-('profesor1', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'María González', 'profesor1@example.com', 'profesor');
+('estudiante1', '$2y$10$N9qo8uLOickgx2ZMRZoMyeIjZAgcfl7p92ldGxad68LJZdL17lhWy', 'Juan Pérez', 'estudiante1@example.com', 'estudiante'),
+('profesor1', '$2y$10$N9qo8uLOickgx2ZMRZoMyeIjZAgcfl7p92ldGxad68LJZdL17lhWy', 'María González', 'profesor1@example.com', 'profesor');
 
 -- Vista para listar documentos con información del usuario
 CREATE OR REPLACE VIEW vista_documentos AS
