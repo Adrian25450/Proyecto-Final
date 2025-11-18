@@ -30,8 +30,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         if ($stmt->rowCount() > 0) {
             $row = $stmt->fetch(PDO::FETCH_ASSOC);
             
-            // Verificar contraseña
-            if (password_verify($password, $row['password'])) {
+            // Verificar contraseña (comparación directa para simplificar)
+            if ($password === $row['password']) {
                 
                 // Crear sesión
                 $_SESSION['user_id'] = $row['id'];

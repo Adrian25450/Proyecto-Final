@@ -45,10 +45,24 @@ services:
     networks:
       - app-network
 
+  # Servicio de Jenkins
+  jenkins:
+    image: jenkins/jenkins:lts
+    container_name: gestion_documentos_jenkins
+    ports:
+      - "8080:8080" # Jenkins web UI
+      - "50000:50000" # Jenkins agent communication
+    volumes:
+      - jenkins-data:/var/jenkins_home
+    networks:
+      - app-network
+
 networks:
   app-network:
     driver: bridge
 
 volumes:
   mysql-data:
+    driver: local
+  jenkins-data:
     driver: local
