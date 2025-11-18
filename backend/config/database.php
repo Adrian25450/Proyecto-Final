@@ -5,7 +5,7 @@ class Database {
     private $host = "mysql";  // Nombre del servicio en docker-compose
     private $database_name = "gestion_documentos";
     private $username = "root";
-    private $password = "root123";
+    private $password = "root";
     public $conn;
 
     // Obtener conexión a la base de datos
