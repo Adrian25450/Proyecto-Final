@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Profesor</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <div class="dashboard-header">
+            <h2>Dashboard del Profesor</h2>
+            <div class="user-info">
+                <span id="userInfo"></span>
+                <button id="logoutBtn" class="btn btn-secondary">Cerrar Sesión</button>
+            </div>
+        </div>
+        
+        <div class="dashboard-content">
+            <div class="documents-section">
+                <h3>Documentos Subidos por Estudiantes</h3>
+                <table class="documents-table">
+                    <thead>
+                        <tr>
+                            <th>Título</th>
+                            <th>Descripción</th>
+                            <th>Estudiante</th>
+                            <th>Fecha de Subida</th>
+                            <th>Archivo</th>
+                            <th>Acción</th>
+                        </tr>
+                    </thead>
+                    <tbody id="documentsList">
+                        <!-- Los documentos se cargarán aquí -->
+                    </tbody>
+                </table>
+                <div id="documentsMessage" class="message" style="display: none;"></div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="js/profesor.js"></script>
+</body>
+</html>

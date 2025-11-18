@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Estudiante</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <div class="dashboard-header">
+            <h2>Dashboard del Estudiante</h2>
+            <div class="user-info">
+                <span id="userInfo"></span>
+                <button id="logoutBtn" class="btn btn-secondary">Cerrar Sesión</button>
+            </div>
+        </div>
+        
+        <div class="dashboard-content">
+            <div class="upload-section">
+                <h3>Subir Nuevo Documento</h3>
+                <form id="uploadForm" class="upload-form">
+                    <div class="form-group">
+                        <label for="titulo">Título del Documento</label>
+                        <input type="text" id="titulo" name="titulo" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="descripcion">Descripción</label>
+                        <textarea id="descripcion" name="descripcion"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="documento">Seleccionar Archivo</label>
+                        <input type="file" id="documento" name="documento" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Subir Documento</button>
+                    <div id="uploadMessage" class="message"></div>
+                </form>
+            </div>
+        </div>
+    </div>
+    
+    <script src="js/estudiante.js"></script>
+</body>
+</html>
