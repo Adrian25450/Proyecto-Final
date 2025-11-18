@@ -12,6 +12,7 @@ RUN a2enmod rewrite
 # Copiar los archivos de la aplicación al directorio de Apache
 COPY ./backend /var/www/html/backend
 COPY ./frontend /var/www/html/frontend
+COPY ./index.html /var/www/html/index.html
 
 # Establecer permisos correctos para la carpeta de uploads
 RUN mkdir -p /var/www/html/backend/uploads && \
